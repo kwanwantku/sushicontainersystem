@@ -8,7 +8,7 @@ package model.menu;
  */
 public class Sushi extends MenuItem {
 
-	public Sushi(String productId, String name, String image, double price) {
+	public Sushi(int productId, String name, String image, double price) {
 		super(productId, name, image, price);
 	}
 }

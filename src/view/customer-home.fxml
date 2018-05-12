@@ -11,7 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0"
       prefWidth="535.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.HomeController">
+      fx:controller="controller.CustomerHomeController">
     <children>
         <ImageView fx:id="itemImg" fitHeight="200" fitWidth="100"/>
         <ListView fx:id="itemListView" layoutX="0" layoutY="100" prefHeight="200.0" prefWidth="247.0"/>

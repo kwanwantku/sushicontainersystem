@@ -7,7 +7,7 @@ package model.menu;
  * @since 2018.04.18
  */
 public class Sweet extends MenuItem {
-	public Sweet(String productId, String name, String image, double price) {
+	public Sweet(int productId, String name, String image, double price) {
 		super(productId, name, image, price);
 	}
 }

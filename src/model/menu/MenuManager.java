@@ -1,11 +1,9 @@
 package model.menu;
 
-import util.MenuAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuManager implements MenuAdapter.DataSource {
+public class MenuManager {
 
     private static MenuManager instance = null;
 
@@ -26,25 +24,15 @@ public class MenuManager implements MenuAdapter.DataSource {
         if (items == null) {
             //DB
             items = new ArrayList<>();
-            items.add(new Sushi("s001", "Tamako", "", 50));
-            items.add(new Appitizer("a001", "Apppp", "", 50));
-            items.add(new Sweet("w001", "swwwww`", "", 50));
+            items.add(new Sushi(3, "Tamako", "", 50));
+            items.add(new Appitizer(4, "Apppp", "", 50));
+            items.add(new Sweet(5, "swwwww`", "", 50));
         }
         return items;
     }
 
     public List<MenuItem> all(){
         return readAllItems();
-    }
-
-    @Override
-    public MenuAdapter.Item getItem(int index) {
-        return readAllItems().get(index);
-    }
-
-    @Override
-    public int getCount() {
-        return readAllItems().size();
     }
 
 }

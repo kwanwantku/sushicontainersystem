@@ -20,7 +20,6 @@ public class ImageFactory {
 	}
 
 	public Image getImage(String filename) {
-	    //System.out.println(new File(filename).toURI().toString());
             File f = new File(filename);
             if(!f.exists()){
                 f = new File("assets/defaultThumbnail");
@@ -32,4 +31,3 @@ public class ImageFactory {
 		return new ImageView(getImage(filename));
 	}
 }
-//ImageView iv = ImageFactory.getInstance().getImage("prang.png");

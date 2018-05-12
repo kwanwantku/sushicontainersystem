@@ -1,22 +1,32 @@
 package model.menu;
 
-import util.MenuAdapter;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
-public abstract class MenuItem implements MenuAdapter.Item {
+@DatabaseTable(tableName = "MenuItem")
+public class MenuItem {
 
-	private String productId;
+    @DatabaseField(generatedId = true)
+	private Integer productId;
+    @DatabaseField
 	private String name;
+    @DatabaseField
 	private String image;
+    @DatabaseField
 	private double price;
 
-	public MenuItem(String productId, String name, String image, double price) {
-		this.productId = productId;
-		this.name = name;
-		this.image = image;
-		this.price = price;
-	}
+    public MenuItem() {
+        this(-1, null, null, 0);
+    }
 
-	public String getProductId() {
+    public MenuItem(Integer productId, String name, String image, double price) {
+        this.productId = productId;
+        this.name = name;
+        this.image = image;
+        this.price = price;
+    }
+
+	public int getProductId() {
 		return productId;
 	}
 
@@ -30,5 +40,15 @@ public abstract class MenuItem implements MenuAdapter.Item {
 
 	public double getPrice() {
 		return price;
+	}
+
+	@Override
+	public String toString() {
+		return "MenuItem{" +
+				"productId=" + productId +
+				", name='" + name + '\'' +
+				", image='" + image + '\'' +
+				", price=" + price +
+				'}';
 	}
 }

@@ -7,7 +7,7 @@ package model.menu;
  * @since 2018.04.18
  */
 public class Appitizer extends MenuItem {
-	public Appitizer(String productId, String name, String image, double price) {
+	public Appitizer(int productId, String name, String image, double price) {
 		super(productId, name, image, price);
 	}
 }

@@ -13,7 +13,7 @@ import util.ImageFactory;
 import util.ImageHelper;
 import viewfx.TestCell;
 
-public class HomeController {
+public class CustomerHomeController {
 
     @FXML
     private ListView<MenuItem> itemListView;
@@ -26,9 +26,8 @@ public class HomeController {
         itemList.addAll(MenuManager.getInstance().all());
         itemListView.setCellFactory((ListView<MenuItem> l) -> new TestCell());
         itemListView.setItems(itemList);
-
+        
         //System.out.println(getClass().getResourceAsStream("/Users/pranger54/Documents/workspace2/SushiContainerSystems/assets/img.jpg"));
-
-        ImageHelper.bind(itemImg, "assets/img1.jpg");
+        ImageHelper.bind(itemImg, "assets/img.jpg");
     }
 }
